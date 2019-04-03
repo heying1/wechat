@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+    "i-notice-bar": "../../static/images/index",
+    "i-grid": "../../static/images/index",
+    "i-grid-item": "../../static/images/index",
+    "i-grid-icon": "../../static/images/index",
+    "i-grid-label": "../../static/images/index",
+    "i-card": "../../static/images/index"
+}
+}

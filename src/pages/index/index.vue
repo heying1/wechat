@@ -1,26 +1,52 @@
 <template>
   <div>
+    <i-notice-bar>
+    好好学习，天天向上！
+    </i-notice-bar>
     <i-grid>
-    <i-grid-item>
-        <i-grid-icon>
-            <image src="/static/images/user.png" />
-        </i-grid-icon>
-        <i-grid-label>Grid</i-grid-label>
+    <i-grid-item>  
          <i-grid-icon>
-            <image src="/static/images/user.png" />
-        </i-grid-icon>
-        <i-grid-label>Grid</i-grid-label>
-         <i-grid-icon>
-            <image src="/static/images/user.png" />
-        </i-grid-icon>
-        <i-grid-label>Grid</i-grid-label>
-         <i-grid-icon>
-            <image src="/static/images/user.png" />
-        </i-grid-icon>
-        <i-grid-label>Grid</i-grid-label>
+            <image src="/static/images/music.png" />
+        </i-grid-icon> 
+         <i-grid-label>乐器学习</i-grid-label>
     </i-grid-item>
 </i-grid>
-   
+<i-grid>
+    <i-grid-item>
+        <i-grid-icon>
+            <image src="/static/images/sport.png" />
+        </i-grid-icon> 
+        <i-grid-label>体育运动</i-grid-label>
+    </i-grid-item>
+</i-grid>
+<i-grid>
+    <i-grid-item>  
+        <i-grid-icon>
+            <image src="/static/images/exam.png" />
+        </i-grid-icon> 
+        <i-grid-label>考试培训</i-grid-label>
+    </i-grid-item>
+</i-grid>
+<i-grid>
+    <i-grid-item>  
+        <i-grid-icon>
+            <image src="/static/images/lang.png" />
+        </i-grid-icon> 
+        <i-grid-label>语种学习</i-grid-label>
+    </i-grid-item>
+</i-grid>
+ <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+</i-card>
+<i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+</i-card>
+<i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+</i-card>  
 
   </div>
 </template>
@@ -65,54 +91,7 @@ export default {
 </script>
 
 <style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-.all{
-  width:7.5rem;
-  height:1rem;
-  background-color:blue;
-}
-.all:after{
-  display:block;
-  content:'';
-  clear:both;
-}
-.left{
-  float:left;
-  width:3rem;
-  height:1rem;
-  background-color:red;
-}
-
-.right{
-  float:left;
-  width:4.5rem;
-  height:1rem;
-  background-color:green;
+div >>>.no-border{
+  border-width: 0pt;
 }
 </style>
