@@ -3,36 +3,34 @@
     <i-notice-bar>
     好好学习，天天向上！
     </i-notice-bar>
-    <i-grid>
+    <i-grid i-class="no-border">
     <i-grid-item>  
          <i-grid-icon>
             <image src="/static/images/music.png" />
         </i-grid-icon> 
          <i-grid-label>乐器学习</i-grid-label>
     </i-grid-item>
-</i-grid>
-<i-grid>
-    <i-grid-item>
-        <i-grid-icon>
+
+    <i-grid-item>  
+         <i-grid-icon>
             <image src="/static/images/sport.png" />
         </i-grid-icon> 
-        <i-grid-label>体育运动</i-grid-label>
+         <i-grid-label>体育运动</i-grid-label>
     </i-grid-item>
+     
 </i-grid>
-<i-grid>
+<i-grid i-class="no-border">
     <i-grid-item>  
-        <i-grid-icon>
+         <i-grid-icon>
             <image src="/static/images/exam.png" />
         </i-grid-icon> 
-        <i-grid-label>考试培训</i-grid-label>
+         <i-grid-label>考试培训</i-grid-label>
     </i-grid-item>
-</i-grid>
-<i-grid>
     <i-grid-item>  
-        <i-grid-icon>
+         <i-grid-icon>
             <image src="/static/images/lang.png" />
         </i-grid-icon> 
-        <i-grid-label>语种学习</i-grid-label>
+         <i-grid-label>语种学习</i-grid-label>
     </i-grid-item>
 </i-grid>
  <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
