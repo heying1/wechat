@@ -33,10 +33,12 @@
          <i-grid-label>语种学习</i-grid-label>
     </i-grid-item>
 </i-grid>
+<view v-for="item in data" :key='item' class="top-padding">
  <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
     <view slot="content">内容不错</view>
     <view slot="footer">尾部内容</view>
 </i-card>
+</view>
 <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
     <view slot="content">内容不错</view>
     <view slot="footer">尾部内容</view>
@@ -84,6 +86,16 @@ export default {
 
   created () {
     // let app = getApp()
+    const db = wx.cloud.database({env: 'shop-567234'})
+    db.collection('data').get().then(
+      res =>{
+        console.log(res.data)
+        this.data=res.data
+      }
+    )
+    wx.cloud.callFunction({name: 'user'}).then(
+      res => {console.log(res)}
+    )
   }
 }
 </script>
