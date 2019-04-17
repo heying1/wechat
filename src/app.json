@@ -23,27 +23,27 @@
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
     }, {
-      "text": "订单",
+      "text": "科目",
       "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
+      "iconPath": "static/tabs/list.png",
+      "selectedIconPath": "static/tabs/list-active.png"
     }, {
-      "text": "主页",
+      "text": "我的",
       "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
+      "iconPath": "static/tabs/mine.png",
+      "selectedIconPath": "static/tabs/mine-active.png"
     }],
 
     "items": [{
-      "name": "首页",
+      "name": "科目",
       "pagePath": "pages/index/main",
-      "icon": "static/tabs/home.png",
-      "activeIcon": "static/tabs/home-active.png"
+      "icon": "static/tabs/list.png",
+      "activeIcon": "static/tabs/list-active.png"
     }, {
-      "name": "订单",
+      "name": "我的",
       "pagePath": "pages/logs/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
+      "icon": "static/tabs/mine.png",
+      "activeIcon": "static/tabs/mine-active.png"
     }],
     "position": "bottom"
   }
