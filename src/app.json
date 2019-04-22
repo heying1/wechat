@@ -29,7 +29,7 @@
       "selectedIconPath": "static/tabs/list-active.png"
     }, {
       "text": "我的",
-      "pagePath": "pages/logs/main",
+      "pagePath": "pages/mine/main",
       "iconPath": "static/tabs/mine.png",
       "selectedIconPath": "static/tabs/mine-active.png"
     }],
