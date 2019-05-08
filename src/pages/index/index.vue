@@ -21,36 +21,14 @@
     </i-col>
     </i-row>
 
-    <i-grid i-class="no-border">
-    <i-grid-item i-class="no-border">  
-         <i-grid-icon>
-            <image src="/static/images/music.png" />
-        </i-grid-icon> 
-         <i-grid-label>乐器学习</i-grid-label>
-    </i-grid-item>
-
-    <i-grid-item i-class="no-border">  
-         <i-grid-icon>
-            <image src="/static/images/sport.png" />
-        </i-grid-icon> 
-         <i-grid-label>体育运动</i-grid-label>
-    </i-grid-item> 
-</i-grid>
-
-<i-grid i-class="no-border">
-    <i-grid-item i-class="no-border">  
-         <i-grid-icon>
-            <image src="/static/images/exam.png" />
-        </i-grid-icon> 
-         <i-grid-label>考试培训</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">  
-         <i-grid-icon>
-            <image src="/static/images/lang.png" />
-        </i-grid-icon> 
-         <i-grid-label>语种学习</i-grid-label>
-    </i-grid-item>
-</i-grid>
+     <i-grid i-class="no-border">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item">
+          <i-grid-icon>
+              <image :src="item.img" />
+          </i-grid-icon>
+          <i-grid-label>{{item.type}}</i-grid-label>
+      </i-grid-item>
+  </i-grid>
 
 <view v-for="item in list" :key='item' class="top-padding">
  <i-card :title="item.name" :extra="item.id" :thumb="item.photo">
@@ -75,7 +53,13 @@ export default {
       userInfo: {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
+      },
+      grids:[
+        {type:'乐器学习',img:'/static/images/muci.png',"url":'../list/main?type=1'},
+        {type:'体育运动',img:'/static/images/lang.png',"url":'../list/main?type=2'},
+        {type:'考试培训',img:'/static/images/lang.png',"url":'../list/main?type=3'},
+        {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=4'}
+      ],
     }
   },
 
@@ -95,6 +79,13 @@ export default {
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
+    },
+    goList (url) {
+      mpvue.navigateTo({ url })
+    },
+    goType (type) {
+      let url = '../list/main?type=' + type
+      mpvue.navigateTo({ url })
     }
   },
 
