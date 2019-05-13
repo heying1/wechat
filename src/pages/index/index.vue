@@ -14,15 +14,19 @@
     <i-col span="8" i-class="have-border" offset="4">
       col-8
       <i-button bind:click="handleClick" type="success" shape="circle">默认尺寸</i-button>
-
-
-      
-
     </i-col>
     </i-row>
 
      <i-grid i-class="no-border">
-      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids1" :key="item">
+          <i-grid-icon>
+              <image :src="item.img" />
+          </i-grid-icon>
+          <i-grid-label>{{item.type}}</i-grid-label>
+      </i-grid-item> 
+  </i-grid>
+  <i-grid i-class="no-border">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids2" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
           </i-grid-icon>
@@ -54,11 +58,19 @@ export default {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
       },
-      grids:[
-        {type:'乐器学习',img:'/static/images/muci.png',"url":'../list/main?type=1'},
-        {type:'体育运动',img:'/static/images/lang.png',"url":'../list/main?type=2'},
-        {type:'考试培训',img:'/static/images/lang.png',"url":'../list/main?type=3'},
+      grids1:[
+        {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=1'},
+        {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=2'},
+        {type:'考试培训',img:'/static/images/exam.png',"url":'../list/main?type=3'},
         {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=4'}
+       
+      ],
+      grids2:[
+    
+        {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=5'},
+        {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=6'},
+        {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=7'},
+        {type:'更多科目',img:'/static/images/text.png',"url":'../list/main?type=8'}
       ],
     }
   },
