@@ -36,8 +36,8 @@
 
 <view v-for="item in list" :key='item' class="top-padding">
  <i-card :title="item.name" :extra="item.id" :thumb="item.photo">
-    <view slot="content">{{item.major}}</view>
     <view slot="content">{{item.school}}</view>
+    <view slot="content">{{item.major}}</view>
     <view slot="content">{{item.intro}}</view>
     <view slot="footer"></view>
 </i-card>
@@ -59,18 +59,18 @@ export default {
         avatarUrl: 'http://mpvue.com/assets/logo.png'
       },
       grids1:[
-        {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=1'},
-        {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=2'},
-        {type:'考试培训',img:'/static/images/exam.png',"url":'../list/main?type=3'},
-        {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=4'}
+        {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=music'},
+        {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=sport'},
+        {type:'考试培训',img:'/static/images/exam.png',"url":'../list/main?type=exam'},
+        {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=lang'}
        
       ],
       grids2:[
     
-        {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=5'},
-        {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=6'},
-        {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=7'},
-        {type:'更多科目',img:'/static/images/text.png',"url":'../list/main?type=8'}
+        {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=preschool'},
+        {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=juniorschool'},
+        {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=life'},
+        {type:'更多科目',img:'/static/images/text.png',"url":'../list/main?type=text'}
       ],
     }
   },
