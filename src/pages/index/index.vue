@@ -7,13 +7,13 @@
     <i-row i-class="have-border">
     <i-col span="8" i-class="have-border" offset="4">
       col-8
-      <i-button bind:click="handleClick" type="success" shape="circle">默认尺寸</i-button>
+      <i-button bind:click="handleClick" type="success" >教员库</i-button>
 
     </i-col>
 
     <i-col span="8" i-class="have-border" offset="4">
       col-8
-      <i-button bind:click="handleClick" type="success" shape="circle">默认尺寸</i-button>
+      <i-button bind:click="handleClick" type="success" >学员库</i-button>
     </i-col>
     </i-row>
 
