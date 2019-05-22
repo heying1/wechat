@@ -5,15 +5,16 @@
     </i-notice-bar>
 
     <i-row i-class="have-border">
+      <Page :id="pageId" show-total :total="total" :page-size="pagesize"></Page>
     <i-col span="8" i-class="have-border" offset="4">
       col-8
-      <i-button bind:click="handleClick" type="success" >教员库</i-button>
+      <i-button @click="goElevatorPage(pageId)" type="success" >教员库</i-button>
 
     </i-col>
 
     <i-col span="8" i-class="have-border" offset="4">
       col-8
-      <i-button bind:click="handleClick" type="success" >学员库</i-button>
+      <i-button @click="handleClick" type="success" >学员库</i-button>
     </i-col>
     </i-row>
 
@@ -72,6 +73,8 @@ export default {
         {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=life'},
         {type:'更多科目',img:'/static/images/text.png',"url":'../list/main?type=text'}
       ],
+      pageId:"logs",
+      pageId1:"index"
     }
   },
 
@@ -98,7 +101,11 @@ export default {
     goType (type) {
       let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
-    }
+    },
+    goElevatorPage(pageId){
+let url = '../list/main?type=' + pageId
+mpvue.navigateTo({ url })
+   }
   },
 
   created () {
