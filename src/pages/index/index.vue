@@ -3,22 +3,10 @@
     <i-notice-bar icon="systemprompt" loop>
     好好学习，天天向上！
     </i-notice-bar>
-
-    <i-row i-class="have-border">
       <Page :id="pageId" show-total :total="total" :page-size="pagesize"></Page>
-    <i-col span="8" i-class="have-border" offset="4">
-      col-8
       <i-button @click="goElevatorPage(pageId)" type="success" >教员库</i-button>
-
-    </i-col>
-
-    <i-col span="8" i-class="have-border" offset="4">
-      col-8
-      <i-button @click="handleClick" type="success" >学员库</i-button>
-    </i-col>
-    </i-row>
-
-     <i-grid i-class="no-border">
+       <i-button @click="handleClick" type="success" >学员库</i-button>
+       <i-grid i-class="no-border">
       <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids1" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
