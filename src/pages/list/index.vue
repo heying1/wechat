@@ -1,13 +1,6 @@
 <template>
   <div>
-    <view v-for="item in list" :key='item' class="top-padding">
- <i-card :title="item.name" :extra="item.id" :thumb="item.photo">
-    <view slot="content">{{item.major}}</view>
-    <view slot="content">{{item.school}}</view>
-    <view slot="content">{{item.intro}}</view>
-    <view slot="footer"></view>
-</i-card>
-</view>
+    
   </div>
 </template>
 
@@ -27,7 +20,8 @@ export default {
     }
   },
   onLoad (option){
-    console.log(option)
+    console.log(option.type)
+    this.list=require()
     
   },
 

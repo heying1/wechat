@@ -7,7 +7,7 @@
       <i-button @click="goElevatorPage(pageId)" type="success" >教员库</i-button>
        <i-button @click="handleClick" type="success" >学员库</i-button>
        <i-grid i-class="no-border">
-      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids1" :key="item">
+      <i-grid-item @click="goType(type)" i-class="no-border" v-for="item in grids1" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
           </i-grid-icon>
@@ -15,7 +15,7 @@
       </i-grid-item> 
   </i-grid>
   <i-grid i-class="no-border">
-      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids2" :key="item">
+      <i-grid-item @click="goType(type)" i-class="no-border" v-for="item in grids2" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
           </i-grid-icon>
@@ -87,11 +87,12 @@ export default {
       mpvue.navigateTo({ url })
     },
     goType (type) {
-      let url = '../list/main?type=' + type
+      console.log(type)
+      let url = '../list/main?type=' + type.title
       mpvue.navigateTo({ url })
     },
     goElevatorPage(pageId){
-let url = '../list/main?type=' + pageId
+let url = '../logs/main?type=' + pageId
 mpvue.navigateTo({ url })
    }
   },

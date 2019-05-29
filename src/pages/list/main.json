@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "123",
   "usingComponents": {
     "i-grid": "../../../static/iview/grid/index",
     "i-grid-item": "../../../static/iview/grid-item/index",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Table :columns="columns1" :data="list"></Table>
+    
   </div>
 </template>
 
@@ -16,45 +16,24 @@ export default {
   data () {
     return {
       logs: [],
-      columns1:  [ // 表头定义
-               {
-                     title: '全部',
-                     key: ''  // 对应list的name
-                },
-                {
-                  title:'学前小学',
-                  key:''
-                },
-                {
-                  title:'初中高中',
-                  key:''
-                },
-                {
-                  title:'乐器学习',
-                  key:''
-                },
-                {
-                  title:'生活兴趣',
-                  key:''
-                },
-                {
-                  title:'语种学习',
-                  key:''
-                },
-                {
-                  title:'体育运动',
-                  key:''
-                },
-                {
-                  title:'考试培训',
-                  key:''
-                },
-          ]
+      
     }
   },
+   onLoad (option){
+    console.log(option)
+   },
 
   created () {
-    
+    const db = wx.cloud.database({env: 'shop-567234'})
+    db.collection('option.type').get().then(
+      res =>{
+        console.log(res.data)
+        this.list=res.data
+      }
+    )
+    wx.cloud.callFunction({name: 'user'}).then(
+      res => {console.log(res)}
+    )
   }
 }
 </script>
