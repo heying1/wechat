@@ -19,20 +19,57 @@ export default {
       
     }
   },
-  onLoad (option){
+  onLoad (option){/*
     console.log(option.type)
-    this.list=require()
+    this.list=require()*/
     
   },
 
   created () {
     const db = wx.cloud.database({env: 'shop-567234'})
-    db.collection('option.type').get().then(
+    db.collection('exam').get().then(
       res =>{
         console.log(res.data)
-        this.list=res.data
+        this.exam=res.data
       }
     )
+    db.collection('juniorschool').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    db.collection('music').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    db.collection('sport').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    db.collection('lang').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    db.collection('life').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    db.collection('preschool').get().then(
+      res =>{
+        console.log(res.data)
+        this.exam=res.data
+      }
+    )
+    
     wx.cloud.callFunction({name: 'user'}).then(
       res => {console.log(res)}
     )

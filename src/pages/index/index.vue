@@ -117,7 +117,4 @@ mpvue.navigateTo({ url })
 div >>>.no-border{
   border-width: 0pt;
 }
-div >>>.have-border{
-  border-width: 1pt;
-}
 </style>
