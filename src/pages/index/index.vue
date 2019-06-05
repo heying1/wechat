@@ -88,7 +88,7 @@ export default {
     },
     goType (type) {
       console.log(type)
-      let url = '../list/main?type=' + type.title
+      let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
     },
     goElevatorPage(pageId){
@@ -104,6 +104,49 @@ mpvue.navigateTo({ url })
       res =>{
         console.log(res.data)
         this.list=res.data
+        
+      }
+    )
+    db.collection('exam').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('juniorschool').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('music').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('sport').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('lang').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('life').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
+      }
+    )
+    db.collection('preschool').get().then(
+      res =>{
+        console.log(res.data)
+        this.recommand = res.data
       }
     )
     wx.cloud.callFunction({name: 'user'}).then(
