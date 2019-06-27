@@ -3,7 +3,10 @@
     "pages/index/main",
     "pages/logs/main",
     "pages/counter/main",
-    "pages/mine/main"
+    "pages/mine/main",
+    "pages/teacher/main",
+    "pages/student/main"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

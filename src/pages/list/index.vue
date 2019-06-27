@@ -1,6 +1,6 @@
 <template>
   <div>
-    <view v-for="item in list" :key='item' class="top-padding">
+    <view v-for="item in recommand" :key='item' class="top-padding">
  <i-card :title="item.name" :extra="item.id" :thumb="item.photo">
     <view slot="content">{{item.school}}</view>
     <view slot="content">{{item.major}}</view>
@@ -26,9 +26,9 @@ export default {
       
     }
   },
-  onLoad (option){/*
+  onLoad (option){
     console.log(option.type)
-    this.list=require()*/
+    this.recommand = require( option.type )
     
   },
 

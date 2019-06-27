@@ -1,10 +1,23 @@
 <template>
   <div>
+    <swiper
+      :indicator-dots="indicatorDots"
+      :autoplay="autoplay"
+      :interval="interval"
+      :duration="duration"
+      style="height:200px"
+    >
+    <block v-for="item in imgUrls" :key="item">
+      <swiper-item>
+        <image :src="item" style="width:100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
     <i-notice-bar icon="systemprompt" loop>
     好好学习，天天向上！
     </i-notice-bar>
       <Page :id="pageId" show-total :total="total" :page-size="pagesize"></Page>
-      <i-button @click="goElevatorPage(pageId)" type="success" >教员库</i-button>
+      <i-button @click="goElevatorPage" type="success" >教员库</i-button>
        <i-button @click="handleClick" type="success" >学员库</i-button>
        <i-grid i-class="no-border">
       <i-grid-item @click="goType(type)" i-class="no-border" v-for="item in grids1" :key="item">
@@ -42,11 +55,21 @@ export default {
   data () {
     return {
       list:[],
+      /*
       motto: 'Hello miniprograme',
       userInfo: {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
-      },
+      },*/
+       imgUrls: [
+        '/static/images/1.jpg',
+        '/static/images/2.jpg',
+        '/static/images/3.jpg'
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
       grids1:[
         {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=music'},
         {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=sport'},
@@ -91,9 +114,15 @@ export default {
       let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
     },
-    goElevatorPage(pageId){
-let url = '../logs/main?type=' + pageId
-mpvue.navigateTo({ url })
+    goElevatorPage(){
+      wx.navigateTo({
+        url:'../teacher/main' 
+        })  
+   },
+   handleClick(){
+     wx.navigateTo({
+       url:'../student/main'
+     })
    }
   },
 
@@ -110,43 +139,43 @@ mpvue.navigateTo({ url })
     db.collection('exam').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.exam = res.data
       }
     )
     db.collection('juniorschool').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.juniorschool= res.data
       }
     )
     db.collection('music').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.music = res.data
       }
     )
     db.collection('sport').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.sport = res.data
       }
     )
     db.collection('lang').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.lang = res.data
       }
     )
     db.collection('life').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.life = res.data
       }
     )
     db.collection('preschool').get().then(
       res =>{
         console.log(res.data)
-        this.recommand = res.data
+        this.preschool = res.data
       }
     )
     wx.cloud.callFunction({name: 'user'}).then(
