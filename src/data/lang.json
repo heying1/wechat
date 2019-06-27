@@ -1,0 +1,5 @@
+[
+    {"name":"杨教员","school":"湖北大学","major":"日语","photo":"/static/images/woman.png","intro":"现就读于湖北大学外国语学院，日语专业大二学生，可教日语"},
+    {"name":"方教员","school":"湖北大学","major":"法语","photo":"/static/images/woman.png","intro":"现就读于湖北大学外国语学院，法语专业大三学生，可教法语"},
+    {"name":"张教员","school":"湖北大学","major":"葡萄牙语","photo":"/static/images/man.png","intro":"现就读于湖北大学外国语学院，葡萄牙语专业大三学生，可葡萄牙语"}
+]

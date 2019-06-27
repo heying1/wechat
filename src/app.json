@@ -26,7 +26,7 @@
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
     }, {
-      "text": "科目",
+      "text": "教员",
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/list.png",
       "selectedIconPath": "static/tabs/list-active.png"
@@ -38,7 +38,7 @@
     }],
 
     "items": [{
-      "name": "科目",
+      "name": "教员",
       "pagePath": "pages/index/main",
       "icon": "static/tabs/list.png",
       "activeIcon": "static/tabs/list-active.png"

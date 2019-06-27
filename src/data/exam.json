@@ -1,0 +1,5 @@
+[
+    {"name":"郝教员","school":"湖北大学","major":"英语","photo":"/static/images/woman.png","intro":"现就读于湖北大学外国语学院，英语专业大三学生，可辅导四六级等"},
+    {"name":"龚教员","school":"湖北大学","major":"数学","photo":"/static/images/woman.png","intro":"现就读于湖北大学外国语学院，数学专业大三学生，可辅导考前培训等"},
+    {"name":"郝教员","school":"湖北大学","major":"计算机","photo":"/static/images/man.png","intro":"现就读于湖北大学外国语学院，计算机专业大三学生，可辅导计算机二级等"}
+]

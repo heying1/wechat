@@ -1,4 +1,5 @@
 {
+    "navigationBarTitleText": "湖大家教中心试营",
     "usingComponents": {
     "i-notice-bar": "../../../static/dist/notice-bar/index",
     "i-grid": "../../../static/dist/grid/index",

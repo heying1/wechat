@@ -82,7 +82,7 @@ export default {
         {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=preschool'},
         {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=juniorschool'},
         {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=life'},
-        {type:'更多科目',img:'/static/images/text.png',"url":'../list/main?type=text'}
+        {type:'其它科目',img:'/static/images/text.png',"url":'../list/main?type=text'}
       ],
       pageId:"logs",
       pageId1:"index"
@@ -178,6 +178,13 @@ export default {
         this.preschool = res.data
       }
     )
+    db.collection('text').get().then(
+      res =>{
+        console.log(res.data)
+        this.text = res.data
+      }
+    )
+
     wx.cloud.callFunction({name: 'user'}).then(
       res => {console.log(res)}
     )

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "选择科目",
+  "navigationBarTitleText": "所有教员",
   "usingComponents": {
     "i-notice-bar": "../../../static/dist/notice-bar/index",
     "i-grid": "../../../static/dist/grid/index",

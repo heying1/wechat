@@ -6,13 +6,14 @@
     </view>
     <open-data type="userNickName"></open-data>
     </view>
-    <i-panel title="我要申请做教员/学员">
-      <i-input :value="name" @change="changeName($event)" title="店铺名称" autofocus placeholder="请输入店名" maxlength="20" />
-      <i-input :value="address" @change="changeAddress($event)" title="详细地址" placeholder="请输入详细地址" maxlength="30" />
-      <i-input :value="reason" @change="changeReason($event)" title="推荐理由" placeholder="请输入推荐理由" maxlength="50" />
+    <i-panel title="我要申请做教员">
+      <i-input :value="name" @change="changeName($event)" title="真实姓名" autofocus placeholder="请输入真实姓名" maxlength="20" />
+      <i-input :value="school" @change="changeAddress($event)" title="就读学校" placeholder="请输入学校名称" maxlength="30" />
+      <i-input :value="major" @change="changeReason($event)" title="所学专业" placeholder="请输入专业名称" maxlength="50" />
+       <i-input :value="intro" @change="changeReason($event)" title="自我介绍" placeholder="请介绍一下自己吧" maxlength="200" />
     </i-panel>
-    <i-button @click="handleClick" type="warning" size="default">我要推荐</i-button>
-    <view class="tips">湖北大学家教中心，欢迎大家的加入，免中介费用呀！！！</view>
+    <i-button @click="handleClick" type="warning" size="default">确定加入</i-button>
+    <view class="tips">湖北大学家教试营中心，欢迎大家的加入！！！</view>
 
    
   </div>
