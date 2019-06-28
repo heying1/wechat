@@ -1,0 +1,5 @@
+[
+    {"type":1,"name":"李教员","school":"湖北大学","major":"英语","photo":"/static/images/woman.png","intro":"现就读于湖北大学外国语学院，英语专业大三学生，有丰富学前小学英语辅导经验"},
+    {"type":1,"name":"龚教员","school":"湖北大学","major":"数学","photo":"/static/images/man.png","intro":"现就读于湖北大学数统学院，数学专业大三学生，有丰富学前小学数学辅导经验"},
+    {"type":1,"name":"陈教员","school":"湖北大学","major":"汉语言文学","photo":"/static/images/man.png","intro":"现就读于湖北大学汉语言文学专业大三学生，有丰富学前语文辅导经验"}
+]

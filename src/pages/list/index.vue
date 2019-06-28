@@ -3,7 +3,7 @@
     <i-panel title="具体科目">
       <view>
         <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
-            <view slot="content">{{item.schoo}}</view>
+            <view slot="content">{{item.school}}</view>
             <view slot="content">{{item.major}}</view>
             <view slot="content">{{item.intro}}</view>
             <view slot="footer"></view>

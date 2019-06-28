@@ -20,7 +20,7 @@
       <i-button @click="goElevatorPage" type="success" >教员库</i-button>
        <i-button @click="handleClick" type="success" >学员库</i-button>
        <i-grid i-class="no-border">
-      <i-grid-item @click="goType(type)" i-class="no-border" v-for="item in grids1" :key="item">
+      <i-grid-item @click="goType(item.url)" i-class="no-border" v-for="item in grids1" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
           </i-grid-icon>
@@ -71,18 +71,18 @@ export default {
       interval: 5000,
       duration: 1000,
       grids1:[
-        {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=music'},
-        {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=sport'},
-        {type:'考试培训',img:'/static/images/exam.png',"url":'../list/main?type=exam'},
-        {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=lang'}
+        {type:'乐器学习',img:'/static/images/music.png',"url":'../list/main?type=5'},
+        {type:'体育运动',img:'/static/images/sport.png',"url":'../list/main?type=6'},
+        {type:'考试培训',img:'/static/images/exam.png',"url":'../list/main?type=7'},
+        {type:'语种学习',img:'/static/images/lang.png',"url":'../list/main?type=8'}
        
       ],
       grids2:[
     
-        {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=preschool'},
-        {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=juniorschool'},
-        {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=life'},
-        {type:'其它科目',img:'/static/images/text.png',"url":'../list/main?type=text'}
+        {type:'学前小学',img:'/static/images/preschool.png',"url":'../list/main?type=1'},
+        {type:'初中高中',img:'/static/images/juniorschool.png',"url":'../list/main?type=2'},
+        {type:'生活兴趣',img:'/static/images/life.png',"url":'../list/main?type=3'},
+        {type:'其它科目',img:'/static/images/text.png',"url":'../list/main?type=4'}
       ],
       pageId:"logs",
       pageId1:"index"
@@ -110,9 +110,9 @@ export default {
       mpvue.navigateTo({ url })
     },
     goType (type) {
-      console.log(type)
-      let url = '../list/main?type=' + type
-      mpvue.navigateTo({ url })
+      wx.navigateTo({
+        url : '../list/main?type=' + type
+        }) 
     },
     goElevatorPage(){
       wx.navigateTo({
